@@ -1,6 +1,5 @@
 // ==UserScript==
 // @name         Krunker.io Aimbot
-// @version      42
 // @author       880183
 // @match        *://krunker.io/*
 // @grant        GM_xmlhttpRequest
