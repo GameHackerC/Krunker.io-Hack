@@ -2,7 +2,6 @@
 // @name         Krunker.io Aimbot
 // @version      42
 // @author       880183
-
 // @match        *://krunker.io/*
 // @grant        GM_xmlhttpRequest
 // @require https://greasyfork.org/scripts/368273-msgpack/code/msgpack.js?version=598723
