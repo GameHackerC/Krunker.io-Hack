@@ -4,7 +4,7 @@
 // @description  Aimbot, Unlimited Ammo, Auto Heal, ESP, Wall Hack, Unlimited Ammo... -2019 krunkerio hack- ADBLOCK
 // @author       880183
 // @namespace 880183
-// @updateURL    https://github.com/MrCoderN/krunker.io-hack-cheat-mod/raw/master/krunkerhack.user.js
+// @updateURL    https://github.com/880183/Krunker.io-Aimbot/blob/master/Krunker.io-Aimbot.user.js
 // @downloadURL  https://github.com/880183/Krunker.io-Aimbot/blob/master/Krunker.io-Aimbot.user.js
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
@@ -689,7 +689,7 @@ class Utilities {
             return;
         }
         infoBox.innerHTML = `
-<div class="krunkbotTitle">Krunkerio.org - Krunkerio.net</div>
+<div class="krunkbotTitle">Hack by 880183</div>
 Check Daily ~
 `.trim();
     }
