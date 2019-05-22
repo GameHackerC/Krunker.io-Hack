@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Krunker.io Aimbot
 // @version      7.7
-// @description  Aimbot, Unlimited Ammo, Auto Heal, ESP, Wall Hack, Unlimited Ammo... -2019 krunkerio hack- ADBLOCK
+// @description  Aimbot, Unlimited Ammo, ESP, Wall Hack, Unlimited Ammo...
 // @author       880183
 // @namespace 880183
-// @updateURL    https://github.com/880183/Krunker.io-Aimbot/blob/master/Krunker.io-Aimbot.user.js
-// @downloadURL  https://github.com/880183/Krunker.io-Aimbot/blob/master/Krunker.io-Aimbot.user.js
+// @updateURL    https://github.com/880183/Krunker.io-Aimbot/raw/master/Krunker.io-Aimbot.user.js
+// @downloadURL  https://github.com/880183/Krunker.io-Aimbot/raw/master/Krunker.io-Aimbot.user.js
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @grant        none
