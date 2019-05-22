@@ -5,7 +5,7 @@
 // @author       880183
 // @namespace 880183
 // @updateURL    https://github.com/MrCoderN/krunker.io-hack-cheat-mod/raw/master/krunkerhack.user.js
-// @downloadURL  https://github.com/MrCoderN/krunker.io-hack-cheat-mod/raw/master/krunkerhack.user.js
+// @downloadURL  https://github.com/880183/Krunker.io-Aimbot/blob/master/Krunker.io-Aimbot.user.js
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @grant        none
