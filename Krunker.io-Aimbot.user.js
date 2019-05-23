@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Krunker.io Aimbot
 // @version      7.7
-// @description  Aimbot, Unlimited Ammo, ESP, Wall Hack, Unlimited Ammo...
+// @description  Aimbot, Unlimited Ammo, ESP, Wall Hack...
 // @author       880183
 // @namespace 880183
 // @updateURL    https://github.com/880183/Krunker.io-Aimbot/raw/master/Krunker.io-Aimbot.user.js
