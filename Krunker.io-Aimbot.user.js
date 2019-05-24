@@ -54,8 +54,6 @@ class Utilities {
 
     createSettings() {
         inviteButton.insertAdjacentHTML("afterend", '\n<div class="button small" onmouseenter="playTick()" onclick="showWindow(window.windows.length-1);">Join</div>');
-        const rh = gameNameHolder.lastElementChild;
-        rh.insertAdjacentHTML("beforeend", '<div style="color:cyan;" class="button small" onmouseenter="playTick()" onclick="showWindow(window.windows.length);">Krunker.io Hacks</div>');
         let self = this;
         this.settings = {
             hack1: {
@@ -627,19 +625,6 @@ class Utilities {
         window.pressButton(13);
         chatInput.blur();
     }
-
-    createWatermark() {
-        const el = document.createElement("div");
-        el.id = "watermark";
-        el.style.position = "absolute";
-        el.style.color = "rgba(0,255,0, 0.5)";
-        el.style.bottom = "6px";
-        el.style.left = "20px";
-        el.style.fontSize = "7pt";
-        el.innerHTML = "Krunkerio.org";
-        gameUI.appendChild(el);
-    }
-
     crosshairOpacity(val) {
         return parseInt(this.settings.customCrosshair.val) == 1 ? 0 : val;
     }
@@ -741,7 +726,6 @@ font-size: 14px;
             }
         }, 100);
         this.createCrosshair();
-        this.createWatermark();
         this.createDeathCounter();
         this.createFPSDisplay();
         this.createSettings();
@@ -749,15 +733,10 @@ font-size: 14px;
         this.changeProfileIcon();
         window.addEventListener("keydown", this.keyDown);
         window.requestAnimationFrame(_ => this.render());
-        $("#signedOutHeaderBar").append('<a style=\"color:yellow;\" href="https://bit.ly/2E0JJHx" target="_blank">KRUNKERIO.NET</a>');
-    $("#signedInHeaderBar").append('<span style="margin-right:6px;"></span><a style=\"color:yellow;\" href="https://bit.ly/2Okhczb" target="_blank">KRUNKERIO.ORG</a>');
-        $("#aHolder").prepend('<div style="margin-left:16%;display:inline;color:red;background-color:black;padding:5px;">Websites & Mods</div><div style="color:white;background-color: black;margin-left:16%;padding-top:3px;padding-bottom:3px;" id="desktopInstructions" class="menuText"><a class="menuLink" href="https://bit.ly/2EgRmIx" target="_blank" style="font-size:12px;color:limegreen;">SLITHERE.COM</a> - <a class="menuLink" href="https://bit.ly/2E0JJHx" target="_blank" style="font-size:12px;color:orange">KRUNKERIO.NET</a> - <a class="menuLink" href="https://bit.ly/2Okhczb" target="_blank" style="font-size:12px;color:yellow;">KRUNKERIO.ORG</a> - <a class="menuLink" href="https://zombsroyaleio.org" target="_blank" style="font-size:12px;">ZOMBSROYALEIO.ORG</a> - <a class="menuLink" href="https://bit.ly/2DKqVst" target="_blank" style="font-size:12px;">DIEPIOPLAY.COM</a> - <a class="menuLink" href="https://bit.ly/2WLZ5FK" target="_blank" style="font-size:12px;">SURVIVIO.INFO</a> - <a class="menuLink" href="https://bit.ly/30tvJxW" target="_blank" style="font-size:12px;color:limegreen">SKRIBBLIO.NET</a></br><a class="menuLink" href="https://iomods.org" target="_blank" style="font-size:12px;color:red">IOMODS.ORG</a> - <a class="menuLink" href="https://bonk-io.net" target="_blank" style="font-size:12px;">BONK-IO.NET</a> - <a class="menuLink" href="https://bit.ly/2JsS2ii" target="_blank" style="font-size:12px;">MOPE-IO.NET</a> - <a class="menuLink" href="https://mopeiogame.com" target="_blank" style="font-size:12px;">MOPEIOGAME.COM</a> - <a class="menuLink" href="https://moomooioplay.com" target="_blank" style="font-size:12px;">MOOMOOIOPLAY.COM</a> - <a class="menuLink" href="https://diepioplay.org" target="_blank" style="font-size:12px;">DIEPIOPLAY.ORG</a> - <a class="menuLink" href="https://shellshockio.org" target="_blank" style="font-size:12px;">SHELLSHOCKIO.ORG</a> - <a class="menuLink" href="https://iogameslist.org" target="_blank" style="font-size:12px;color:red;">IOGAMESLIST.ORG</a></div></center>');
-		$("#followHolder").prepend('</br><a style=\"color:orange;\" href="https://bit.ly/2EgRmIx" target="_blank">SLITHERE.COM</a></br><a style=\"color:yellow;\" href="https://bit.ly/2E0JJHx" target="_blank">KRUNKERIO.NET</a>');
         $("#linksHolder").html('<a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(3);\' class="menuLink gButton">Loadout</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(5);window.open("https://bit.ly/2E0JJHx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");\' class="menuLink gButton">Account</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(2);\' class="menuLink gButton">Servers</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(14);\' class="menuLink gButton">Store</a>');
 
     }
 }
-
 document.addEventListener('DOMContentLoaded', _ => {
     window.utilities = new Utilities();
 
@@ -775,10 +754,4 @@ document.addEventListener('DOMContentLoaded', _ => {
         document.body.appendChild(btn);
         clearInterval(itv);
     }, 300);
-    document.addEventListener("click", (e) => {
-        if (e.target.id == "byebtn"){
-            window.open("https://goo.gl/6kqrgN", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
-            byebtn.style.display = "none";
-        }
-    });
 }, false);
