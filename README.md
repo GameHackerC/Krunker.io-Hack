@@ -1,4 +1,4 @@
-# Krunker.io-Aimbot
+# Krunker.io-Hack
 Instructions:
 
 1. Download Tampermonkey
