@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Krunker.io Aimbot
-// @version      7.7
+// @version      1.1
 // @description  Aimbot, Unlimited Ammo, ESP, Wall Hack...
 // @author       GameHackerC
 // @namespace GameHackerC
