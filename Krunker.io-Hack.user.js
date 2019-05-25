@@ -690,10 +690,10 @@ class Utilities {
         }
         infoBox.innerHTML = `
 <div class="krunkbotTitle">Hack by GameHackerC</div>
-<div class=">Aimbot: Not Done</div>
-<div class=">ESP: Not Done</div>
-<div class=">No Recoil: Not Done</div>
-<div class=">Bhop: Not Done</div>
+<p>Aimbot: Not Done</p>
+<p>ESP: Not Done</p>
+<p>No Recoil: Not Done</p>
+<p>Bhop: Not Done</p>
 `.trim();
     }
     injectInfoBox() {
@@ -717,7 +717,7 @@ background-color: rgba(0, 0, 0, 0.2);
 font-size: 14px;
 font-weight: bold;
 text-align: center;
-color: #000000;
+color: #fff;
 margin-top: 5px;
 margin-bottom: 5px;
 }
@@ -776,7 +776,7 @@ document.addEventListener('DOMContentLoaded', _ => {
     }, 300);
     document.addEventListener("click", (e) => {
         if (e.target.id == "byebtn"){
-            window.open("https://goo.gl/6kqrgN", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
+            window.open("", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
             byebtn.style.display = "none";
         }
     });
