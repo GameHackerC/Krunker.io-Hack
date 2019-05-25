@@ -636,7 +636,7 @@ class Utilities {
         el.style.bottom = "6px";
         el.style.left = "20px";
         el.style.fontSize = "7pt";
-        el.innerHTML = "Krunkerio.org";
+        el.innerHTML = "";
         gameUI.appendChild(el);
     }
 
