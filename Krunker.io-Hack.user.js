@@ -690,10 +690,10 @@ class Utilities {
         }
         infoBox.innerHTML = `
 <div class="krunkbotTitle">Hack by GameHackerC</div>
-<p><font size="2" color="black">Aimbot: Not Done</font></p>
-<p><font size="2" color="black">ESP: Not Done</font></p>
-<p><font size="2" color="black">Unlimited Ammo: Not Done</font></p>
-<p><font size="2" color="black">Bhop: Not Done</font></p>
+<p><font size="2" color="red">Aimbot: Not Done</font></p>
+<p><font size="2" color="red">ESP: Not Done</font></p>
+<p><font size="2" color="red">Unlimited Ammo: Not Done</font></p>
+<p><font size="2" color="red">Bhop: Not Done</font></p>
 `.trim();
     }
     injectInfoBox() {
