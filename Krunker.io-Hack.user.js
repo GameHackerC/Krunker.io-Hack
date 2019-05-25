@@ -59,7 +59,7 @@ class Utilities {
         let self = this;
         this.settings = {
             hack1: {
-                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2E0JJHx\' target='\_blank\'>Krunkerio.net Fire Bot</a>",
+                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2E0JJHx\' target='\_blank\'></a>",
                 pre: "<div class='setHed'><center><a href=\'https://iomods.org\' target='\_blank\'></a></center></div><div class='setHed'>Modules</div>",
                 val: false,
                 html() {
