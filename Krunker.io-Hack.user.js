@@ -750,8 +750,6 @@ font-size: 14px;
         this.createSettings();
         this.createObservers();
         this.changeProfileIcon();
-        window.addEventListener("keydown", this.keyDown);
-        window.requestAnimationFrame(_ => this.render());
     }
 }
 
