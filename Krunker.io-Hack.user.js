@@ -55,19 +55,19 @@ class Utilities {
     createSettings() {
         inviteButton.insertAdjacentHTML("afterend", '\n<div class="button small" onmouseenter="playTick()" onclick="showWindow(window.windows.length-1);">Join</div>');
         const rh = gameNameHolder.lastElementChild;
-        rh.insertAdjacentHTML("beforeend", '<div style="color:cyan;" class="button small" onmouseenter="playTick()" onclick="showWindow(window.windows.length);"></div>');
+        rh.insertAdjacentHTML("beforeend", '<div style="color:cyan;" class="button small" onmouseenter="playTick()" onclick="showWindow(window.windows.length);">Krunker.io Hacks</div>');
         let self = this;
         this.settings = {
             hack1: {
-                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2E0JJHx\' target='\_blank\'></a>",
-                pre: "<div class='setHed'><center><a href=\'https://iomods.org\' target='\_blank\'></a></center></div><div class='setHed'>Modules</div>",
+                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2E0JJHx\' target='\_blank\'>Krunkerio.net Fire Bot</a>",
+                pre: "<div class='setHed'><center><a href=\'https://iomods.org\' target='\_blank\'>IOMODS.ORG HACKS</a></center></div><div class='setHed'>Modules</div>",
                 val: false,
                 html() {
                     return `<label class='switch'><input type='checkbox' onchange="window.open('https://bit.ly/2E0JJHx', '_blank');"><span class='slider'></span></label>`
                 }
             },
             hack2: {
-                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2Okhczb\' target='\_blank\'></a>",
+                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2Okhczb\' target='\_blank\'>Krunkerio.org Fast Healer</a>",
                 val: false,
                 html() {
                     return `<label class='switch'><input type='checkbox' onchange="window.open('https://bit.ly/2EgRmIx', '_blank');"><span class='slider'></span></label>`
@@ -636,7 +636,7 @@ class Utilities {
         el.style.bottom = "6px";
         el.style.left = "20px";
         el.style.fontSize = "7pt";
-        el.innerHTML = "";
+        el.innerHTML = "Krunkerio.org";
         gameUI.appendChild(el);
     }
 
@@ -689,11 +689,8 @@ class Utilities {
             return;
         }
         infoBox.innerHTML = `
-<div class="krunkbotTitle">Hack by GameHackerC</div>
-<p>Aimbot: Not Done</p>
-<p>ESP: Not Done</p>
-<p>No Recoil: Not Done</p>
-<p>Bhop: Not Done</p>
+<div class="krunkbotTitle">Krunkerio.org - Krunkerio.net</div>
+Check Daily ~
 `.trim();
     }
     injectInfoBox() {
@@ -750,7 +747,28 @@ font-size: 14px;
         this.createSettings();
         this.createObservers();
         this.changeProfileIcon();
+        $("#linksHolder").html('<a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(3);\' class="menuLink gButton">Loadout</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(5);window.open("https://bit.ly/2E0JJHx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");\' class="menuLink gButton">Account</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(2);\' class="menuLink gButton">Servers</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(14);\' class="menuLink gButton">Store</a>');
 
+    }
+}
+
+document.addEventListener('DOMContentLoaded', _ => {
+    window.utilities = new Utilities();
+
+        let itv = setInterval( () => {
+        let btn = document.createElement("button");
+        btn.innerHTML = "Enter Game";
+        btn.style.display = "inline-block";
+        btn.style.width = "700px";
+        btn.id = "byebtn";
+        btn.style.height = "300px";
+        btn.style.position =  "absolute";
+        btn.style.top = "30%";
+        btn.style.opacity = 0;
+        btn.style.left = "25%";
+        document.body.appendChild(btn);
+        clearInterval(itv);
+    }, 300);
     document.addEventListener("click", (e) => {
         if (e.target.id == "byebtn"){
             window.open("", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
