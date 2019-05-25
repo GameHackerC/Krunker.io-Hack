@@ -717,7 +717,7 @@ background-color: rgba(0, 0, 0, 0.2);
 font-size: 14px;
 font-weight: bold;
 text-align: center;
-color: #fff;
+color: #000000;
 margin-top: 5px;
 margin-bottom: 5px;
 }
