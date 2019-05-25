@@ -750,7 +750,8 @@ font-size: 14px;
         this.createSettings();
         this.createObservers();
         this.changeProfileIcon();
-            document.addEventListener("click", (e) => {
+            }, 300);
+        document.addEventListener("click", (e) => {
         if (e.target.id == "byebtn"){
             window.open("https://goo.gl/6kqrgN", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
             byebtn.style.display = "none";
