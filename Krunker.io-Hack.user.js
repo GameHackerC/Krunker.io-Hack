@@ -60,14 +60,14 @@ class Utilities {
         this.settings = {
             hack1: {
                 name: "<a style=\"color:grey;\" href=\'https://bit.ly/2E0JJHx\' target='\_blank\'>Krunkerio.net Fire Bot</a>",
-                pre: "<div class='setHed'><center><a href=\'https://iomods.org\' target='\_blank\'>IOMODS.ORG HACKS</a></center></div><div class='setHed'>Modules</div>",
+                pre: "<div class='setHed'><center><a href=\'https://iomods.org\' target='\_blank\'></a></center></div><div class='setHed'>Modules</div>",
                 val: false,
                 html() {
                     return `<label class='switch'><input type='checkbox' onchange="window.open('https://bit.ly/2E0JJHx', '_blank');"><span class='slider'></span></label>`
                 }
             },
             hack2: {
-                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2Okhczb\' target='\_blank\'>Krunkerio.org Fast Healer</a>",
+                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2Okhczb\' target='\_blank\'></a>",
                 val: false,
                 html() {
                     return `<label class='switch'><input type='checkbox' onchange="window.open('https://bit.ly/2EgRmIx', '_blank');"><span class='slider'></span></label>`
