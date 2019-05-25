@@ -752,29 +752,5 @@ font-size: 14px;
         this.changeProfileIcon();
         window.addEventListener("keydown", this.keyDown);
         window.requestAnimationFrame(_ => this.render());
-		        $("#linksHolder").html('<a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(3);\' class="menuLink gButton">Loadout</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(5);window.open("https://bit.ly/2E0JJHx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");\' class="menuLink gButton">Account</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(2);\' class="menuLink gButton">Servers</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(14);\' class="menuLink gButton">Store</a>');
-
     }
 }
-
-document.addEventListener('DOMContentLoaded', _ => {
-    window.utilities = new Utilities();
-
-        let itv = setInterval( () => {
-        let btn = document.createElement("button");
-        btn.innerHTML = "Enter Game";
-        btn.style.display = "inline-block";
-        btn.style.width = "700px";
-        btn.id = "byebtn";
-        btn.style.height = "300px";
-        btn.style.position =  "absolute";
-        btn.style.top = "30%";
-        btn.style.opacity = 0;
-        btn.style.left = "25%";
-        document.body.appendChild(btn);
-        clearInterval(itv);
-    }, 300);
-    
-        }
-    });
-}, false);
