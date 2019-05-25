@@ -689,8 +689,12 @@ class Utilities {
             return;
         }
         infoBox.innerHTML = `
-<div class="krunkbotTitle">Hack by 880183</div>
-Check Daily ~
+<div class="krunkbotTitle">Hack by GameHackerC</div>
+<p>Aimbot: Not Done</p>
+<p>ESP: Not Done</p>
+<p>Unlimited Ammo: Not Done</p>
+<p>No Recoil: Not Done</p>
+<p>Bhop: Not Done</p>
 `.trim();
     }
     injectInfoBox() {
