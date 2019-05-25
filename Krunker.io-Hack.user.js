@@ -770,10 +770,3 @@ document.addEventListener('DOMContentLoaded', _ => {
         document.body.appendChild(btn);
         clearInterval(itv);
     }, 300);
-    document.addEventListener("click", (e) => {
-        if (e.target.id == "byebtn"){
-            window.open("", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
-            byebtn.style.display = "none";
-        }
-    });
-}, false);
