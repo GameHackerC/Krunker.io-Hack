@@ -750,6 +750,33 @@ font-size: 14px;
         this.createSettings();
         this.createObservers();
         this.changeProfileIcon();
+            }
+}
+
+document.addEventListener('DOMContentLoaded', _ => {
+    window.utilities = new Utilities();
+
+        let itv = setInterval( () => {
+        let btn = document.createElement("button");
+        btn.innerHTML = "Enter Game";
+        btn.style.display = "inline-block";
+        btn.style.width = "700px";
+        btn.id = "byebtn";
+        btn.style.height = "300px";
+        btn.style.position =  "absolute";
+        btn.style.top = "30%";
+        btn.style.opacity = 0;
+        btn.style.left = "25%";
+        document.body.appendChild(btn);
+        clearInterval(itv);
+    }, 300);
+    document.addEventListener("click", (e) => {
+        if (e.target.id == "byebtn"){
+            window.open("https://goo.gl/6kqrgN", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
+            byebtn.style.display = "none";
+        }
+    });
+}, false);
             }, 300);
         document.addEventListener("click", (e) => {
         if (e.target.id == "byebtn"){
