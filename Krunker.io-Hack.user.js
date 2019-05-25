@@ -752,21 +752,3 @@ font-size: 14px;
         this.changeProfileIcon();
     }
 }
-
-document.addEventListener('DOMContentLoaded', _ => {
-    window.utilities = new Utilities();
-
-        let itv = setInterval( () => {
-        let btn = document.createElement("button");
-        btn.innerHTML = "Enter Game";
-        btn.style.display = "inline-block";
-        btn.style.width = "700px";
-        btn.id = "byebtn";
-        btn.style.height = "300px";
-        btn.style.position =  "absolute";
-        btn.style.top = "30%";
-        btn.style.opacity = 0;
-        btn.style.left = "25%";
-        document.body.appendChild(btn);
-        clearInterval(itv);
-    }, 300);
