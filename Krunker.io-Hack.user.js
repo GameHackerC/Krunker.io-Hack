@@ -742,15 +742,3 @@ font-size: 14px;
                 this.injectInfoBox();
                 this.updateInfoBox();
             }
-        }, 100);
-        this.createCrosshair();
-        this.createWatermark();
-        this.createDeathCounter();
-        this.createFPSDisplay();
-        this.createSettings();
-        this.createObservers();
-        this.changeProfileIcon();
-        window.addEventListener("keydown", this.keyDown);
-        window.requestAnimationFrame(_ => this.render());
-    }
-}
