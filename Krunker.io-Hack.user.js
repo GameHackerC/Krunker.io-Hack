@@ -774,9 +774,7 @@ document.addEventListener('DOMContentLoaded', _ => {
         document.body.appendChild(btn);
         clearInterval(itv);
     }, 300);
-    document.addEventListener("click", (e) => {
-        if (e.target.id == "byebtn"){
-            byebtn.style.display = "none";
+    
         }
     });
 }, false);
