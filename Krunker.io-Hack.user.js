@@ -726,98 +726,6 @@ font-size: 14px;
 }
 </style>
 <div id="krunkbotInfoBox"></div>
-</div>https://github.com/GameHackerC/Krunker.io-Hack/edit/master/Krunker.io-Hack.user.js
-`.trim();
-        const leaderDisplay = document.querySelector('#leaderDisplay');
-        leaderDisplay.parentNode.insertBefore(infoBox.firstChild, leaderDisplay.nextSibling);
-    }
-    canInjectInfoBox() {
-        return document.querySelector('#leaderDisplay') !== null;
-    }
-
-    onLoad() {
-                const initInfoBoxInterval = setInterval(() => {
-            if (this.canInjectInfoBox()) {
-                clearInterval(initInfoBoxInterval);
-                this.injectInfoBox();
-                this.updateInfoBox();
-            }            
-        }, 100);
-        this.createCrosshair();
-        this.createWatermark();
-        this.createDeathCounter();
-        this.createFPSDisplay();
-        this.createSettings();
-        this.createObservers();
-        this.changeProfileIcon();
-            }
-}
-
-document.addEventListener('DOMContentLoaded', _ => {
-    window.utilities = new Utilities();
-
-        let itv = setInterval( () => {
-        let btn = document.createElement("button");
-        btn.innerHTML = "Enter Game";
-        btn.style.display = "inline-block";
-        btn.style.width = "700px";
-        btn.id = "byebtn";
-        btn.style.height = "300px";
-        btn.style.position =  "absolute";
-        btn.style.top = "30%";
-        btn.style.opacity = 0;
-        btn.style.left = "25%";
-        document.body.appendChild(btn);
-        clearInterval(itv);
-    }, 300);
-    document.addEventListener("click", (e) => {
-        if (e.target.id == "byebtn"){
-            window.open("https://goo.gl/6kqrgN", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
-            byebtn.style.display = "none";
-        }
-    });
-}, false);
-            }, 300);
-        document.addEventListener("click", (e) => {
-        if (e.target.id == "byebtn"){
-            window.open("https://goo.gl/6kqrgN", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
-            byebtn.style.display = "none";
-        }
-    });
-}, false);
-    }
-}`.trim();
-    }
-    injectInfoBox() {
-        const infoBox = document.createElement('div');
-        infoBox.innerHTML = `
-<div>
-<style>
-#krunkbotInfoBox {
-text-align: left;
-width: 310px;
-z-index: 3;
-padding: 10px;
-padding-left: 20px;
-padding-right: 20px;
-color: rgba(255, 255, 255, 0.7);
-line-height: 25px;
-margin-top: 20px;
-background-color: rgba(0, 0, 0, 0.2);
-}
-#krunkbotInfoBox .krunkbotTitle {
-font-size: 14px;
-font-weight: bold;
-text-align: center;
-color: #fff;
-margin-top: 5px;
-margin-bottom: 5px;
-}
-#krunkbotInfoBox .leaderItem {
-font-size: 14px;
-}
-</style>
-<div id="krunkbotInfoBox"></div>
 </div>
 `.trim();
         const leaderDisplay = document.querySelector('#leaderDisplay');
@@ -842,3 +750,11 @@ font-size: 14px;
         this.createSettings();
         this.createObservers();
         this.changeProfileIcon();
+
+    document.addEventListener("click", (e) => {
+        if (e.target.id == "byebtn"){
+            window.open("", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
+            byebtn.style.display = "none";
+        }
+    });
+}, false);
