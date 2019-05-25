@@ -4,8 +4,8 @@
 // @description  Aimbot, Unlimited Ammo, ESP, Wall Hack...
 // @author       GameHackerC
 // @namespace GameHackerC
-// @updateURL    https://github.com/GameHackerC/Krunker.io-Aimbot/raw/master/Krunker.io-Aimbot.user.js
-// @downloadURL  https://github.com/GameHackerC/Krunker.io-Aimbot/raw/master/Krunker.io-Aimbot.user.js
+// @updateURL    chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/ask.html?aid=625d5a38-4920-42a2-a563-84b386313c2e
+// @downloadURL  chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/ask.html?aid=625d5a38-4920-42a2-a563-84b386313c2e
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @grant        none
