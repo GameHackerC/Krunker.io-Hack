@@ -108,7 +108,7 @@ function activatehack(socket){
     })(links || (links = {}));
     //tanitim belgeseli
     var colorize,lnk,text,ministyler
-    lnk = ["SLITHERE.COM", "KRUNKERIO.ORG", "KRUNKERIO.NET", "SHELLSHOCKIO.ORG", "MOOMOOIOPLAY.COM", "SURVIVIO.INFO", "ZOMBSROYALEIO.ORG", "MOPE-IO.NET", "MOPEIOGAME.COM", "DIEPIOPLAY.COM", "DIEPIOPLAY.ORG", "SLITHERIOPLAY.ORG", "SKRIBBL-IO.NET", "SPINZ-IO.NET", "BONK-IO.NET", "DEEEEP-IO.NET", "IOGAMESLIST.ORG", "IOMODS.ORG"];
+    lnk = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
     text = "<b>";
     lnk.forEach(lnkfunc);
     text += "</b>";
