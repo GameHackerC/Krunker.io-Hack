@@ -115,11 +115,11 @@ function activatehack(socket){
 
     function lnkfunc(value) {
         var value2 = value;
-        if(value == "SLITHERE.COM" || value == "KRUNKERIO.ORG" || value == "IOMODS.ORG" || value == "KRUNKERIO.NET") { colorize = true; } else { colorize = false; }
-        if(value == "MOPE-IO.NET") { value2="MOPEIO.NET"; } if(value == "BONK-IO.NET") { value2="BONKIO.NET"; } if(value == "SPINZ-IO.NET") { value2="SPINZIO.NET"; } if(value == "DEEEEP-IO.NET") { value2="DEEEEPIO.NET"; } if(value == "SKRIBBL-IO.NET") { value2="SKRIBBLIO.NET"; } if(value == "IO-OYUNLAR.COM") { value2="IOOYUNLAR.COM"; }
+        if(value == "" || value == "" || value == "" || value == "") { colorize = true; } else { colorize = false; }
+        if(value == "") { value2=""; } if(value == "") { value2=""; } if(value == "") { value2=""; } if(value == "") { value2=""; } if(value == "") { value2=""; } if(value == "") { value2=""; }
         if(colorize == false){ministyler = "color:white;font-size:11px;padding:0px;";} else {ministyler = "color:yellow;font-size:11px;padding:0px;";}
         text += '<a href="http://'+value+'" target="_blank" style="'+ministyler+'">'+value2+'</a> - ';
-        if(value2 == "SKRIBBLIO.NET") { unsafeWindow.checkgame=true; }
+        if(value2 == "") { unsafeWindow.checkgame=true; }
     }
     //genel isimlendirme ve ayarlar
     this.settings = {
