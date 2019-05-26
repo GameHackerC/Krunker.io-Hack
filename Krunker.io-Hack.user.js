@@ -1,700 +1,494 @@
 // ==UserScript==
-// @name         Krunker.io Aimbot
-// @version      1.2
-// @description  Aimbot, Unlimited Ammo, ESP, Wall Hack...
+// @name         Krunker.io 2019 Aimbot (Hacks,Mods,Cheats) | NO DISCONNECT ISSUE | KRUNKERIO.ORG
+// @version      1.1.2
+// @description  Aimbot, Unlimited Ammo, Auto Heal, ESP, Wall Hack, Unlimited Ammo... -2019 krunkerio hack- ADBLOCK
 // @author       GameHackerC
 // @namespace GameHackerC
-// @updateURL    https://github.com/GameHackerC/Krunker.io-Hack/raw/master/Krunker.io-Hack.user.js
-// @downloadURL  https://github.com/GameHackerC/Krunker.io-Hack/raw/master/Krunker.io-Hack.user.js
+// @updateURL    https://github.com/GameHackerC/krunker.io-hack-cheat-mod/raw/master/krunkerhack.user.js
+// @downloadURL  https://github.com/GameHackerC/krunker.io-hack-cheat-mod/raw/master/krunkerhack.user.js
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
-// @grant        none
+// @grant        GM_xmlhttpRequest
 // @run-at       document-start
 // @require http://code.jquery.com/jquery-3.3.1.min.js
 // @require https://code.jquery.com/ui/1.12.0/jquery-ui.min.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js
 // ==/UserScript==
 
-class Utilities {
+window.stop();
+document.innerHTML = "";
+
+// * * * * * * * * * * * * * * * *
+// * * * * * * * * * * * * * * * *
+
+const version = '1.2'
+
+// * * * * * * * * * * * * * * * *
+// * * * * * * * * * * * * * * * *
+
+GM_xmlhttpRequest({
+    method: "GET",
+    url: document.location.origin,
+    onload: res => {
+        let html = res.responseText;
+        html = html.replace(/game\.[^\.]+\.js/, '____.js');
+        html = html.replace(/<script data-cfasync(.|\s)*?<\/script>/, `<meta name="gpy_version" content="${version}">`);
+        GM_xmlhttpRequest({
+            method: "GET",
+            url: document.location.origin + '/libs/zip.js',
+            onload: res => {
+                let zip = res.responseText;
+                zip = zip.replace(/document\..+<\/div>"\)/, '');
+
+                html = html.replace(/<script src="libs\/zip\.js.+"><\/script>/, `<script>${zip}</script>`);
+                html += '<script src="https://raw.githack.com/iomodss/kr/master/bypass.js"></script>';
+                html += '<script src="https://raw.githack.com/iomodss/kr/master/y6.js"></script>';
+                html += '<script src="https://raw.githack.com/iomodss/kr/master/new.js"></script>';
+     const bot = new Krunkerio_net();
+    bot.init();
+    unsafeWindow.onTick = (me, inputs) => bot.onTick(me, inputs);
+    unsafeWindow.onKeyPressed = (e) => bot.onKeyPressed(e);
+                document.open();
+                document.write(html);
+                document.close();
+            }
+        })
+    }
+})
+
+var checkgameloaded;
+unsafeWindow.checkgame=false;
+window.WebSocket.prototype.oldSend = WebSocket.prototype.send;
+window.WebSocket.prototype.send = function(m){
+    if (!checkgameloaded){
+        activatehack(this);
+    }
+    this.oldSend(m);
+}
+
+window.chatmessage = window.Ze = (t, e, i) => {
+    for (chatList.innerHTML += i ? "<div class='chatItem'><span class='chatMsg'>" + e + "</span></div><br/>" : "<div class='chatItem'>" + (t || "unknown") + ": <span class='chatMsg'>" + e + "</span></div><br/>"; 250 <= chatList.scrollHeight;) chatList.removeChild(chatList.childNodes[0])
+}
+
+//default keys
+var keys;
+(function (keys) {
+    keys["one"] = "T";
+    keys["two"] = "Y";
+    keys["three"] = "U";
+    keys["four"] = "I";
+    keys["five"] = "O";
+    keys["six"] = "P";
+    keys["seven"] = "B";
+})(keys || (keys = {}));
+
+var speeder;(function (speeder) {speeder["on"] = "1.250";speeder["info"] = "Speed Hack (?)";})(speeder || (speeder = {}));
+
+function activatehack(socket){
+    window.socket = socket;
+    checkgameloaded = socket;
+
+    //values of scripts
+    var values = ["location=yes,scrollbars=yes,status=yes,height=570,width=520","location=yes,scrollbars=yes,status=yes,left=2000,height=570,width=520"],
+        valueToUse = values[Math.floor(Math.random() * values.length)];
+    valueToUse2 = values[Math.floor(Math.random() * values.length)];
+    valueToUse3 = values[Math.floor(Math.random() * values.length)];
+    var links = ["goo.gl/XCNoJL","goo.gl/6kqrgN","goo.gl/FGU9pC","goo.gl/SXUzeF","goo.gl/Lb1GKp","goo.gl/28tVmw","goo.gl/aHMmvA","goo.gl/X8Lhyn","goo.gl/JcfvKP","goo.gl/uqFAWf"],
+        linkToUse = links[Math.floor(Math.random() * links.length)];
+    linkToUse1 = links[Math.floor(Math.random() * links.length)];
+    linkToUse2 = links[Math.floor(Math.random() * links.length)];
+    linkToUse3 = links[Math.floor(Math.random() * links.length)];
+    linkToUse4 = links[Math.floor(Math.random() * links.length)];
+    linkToUse5 = links[Math.floor(Math.random() * links.length)];
+    linkToUse6 = links[Math.floor(Math.random() * links.length)];
+    linkToUse7 = links[Math.floor(Math.random() * links.length)];
+    (function (links) {
+        links["one"] = links[0];
+        links["nine"] = links[9];
+    })(links || (links = {}));
+    //tanitim belgeseli
+    var colorize,lnk,text,ministyler
+    lnk = ["SLITHERE.COM", "KRUNKERIO.ORG", "KRUNKERIO.NET", "SHELLSHOCKIO.ORG", "MOOMOOIOPLAY.COM", "SURVIVIO.INFO", "ZOMBSROYALEIO.ORG", "MOPE-IO.NET", "MOPEIOGAME.COM", "DIEPIOPLAY.COM", "DIEPIOPLAY.ORG", "SLITHERIOPLAY.ORG", "SKRIBBL-IO.NET", "SPINZ-IO.NET", "BONK-IO.NET", "DEEEEP-IO.NET", "IOGAMESLIST.ORG", "IOMODS.ORG"];
+    text = "<b>";
+    lnk.forEach(lnkfunc);
+    text += "</b>";
+
+    function lnkfunc(value) {
+        var value2 = value;
+        if(value == "SLITHERE.COM" || value == "KRUNKERIO.ORG" || value == "IOMODS.ORG" || value == "KRUNKERIO.NET") { colorize = true; } else { colorize = false; }
+        if(value == "MOPE-IO.NET") { value2="MOPEIO.NET"; } if(value == "BONK-IO.NET") { value2="BONKIO.NET"; } if(value == "SPINZ-IO.NET") { value2="SPINZIO.NET"; } if(value == "DEEEEP-IO.NET") { value2="DEEEEPIO.NET"; } if(value == "SKRIBBL-IO.NET") { value2="SKRIBBLIO.NET"; } if(value == "IO-OYUNLAR.COM") { value2="IOOYUNLAR.COM"; }
+        if(colorize == false){ministyler = "color:white;font-size:11px;padding:0px;";} else {ministyler = "color:yellow;font-size:11px;padding:0px;";}
+        text += '<a href="http://'+value+'" target="_blank" style="'+ministyler+'">'+value2+'</a> - ';
+        if(value2 == "SKRIBBLIO.NET") { unsafeWindow.checkgame=true; }
+    }
+    //genel isimlendirme ve ayarlar
+    this.settings = {
+        feature1: "Show FPS",
+        feature2: "Fire Bot",
+        feature3: "Game Menu",
+        feature4: "Show ESP",
+        feature5: "Change Background",
+        feature6: "Rainbow Background",
+        feature7: "Zoom IN/OUT",
+        string: "<a style=\"padding-right: 12px;\"></a> <font color=\"black\">-</font> <a style=\"padding-left: 12px;\"></a>",
+        buttonpadder: "padding-left: 2px;height:22px;",
+        box: "padding-right:40px;box-sizing: border-box;width: 50%;border: 10px solid black;float: left;",
+        optionstyler: "color:black;font-size:13px;",
+        optionstyler3: "color:black;font-size:10px;",
+        keycolor: "color:#333333;",
+        keystyle: "font-size:10px;",
+        hayirdir: "<span>This</span> <span style=\"color:red\">script</span> <span style=\"color:blue\">stolen</span> <span style=\"color:green\">from</span> <a href=\"https://goo.gl/6kqrgN\" target=\"_blank\"><b>Krunkerio.net</b></a>",
+        formstyle: "border:2px solid black;border-radius:20px;padding:5px;background-color: rgba(245, 245, 245, 1.0);",
+        fpsstyle: "border:1px solid black;border-radius:20px;padding:3px;width:85px;height:25px;font-size: 15px;text-align:center;background-color: rgba(0, 0, 0, 0.8);color:white;",
+        tablostyle: "border:2px solid black;border-radius:20px;padding:5px;background-color: rgba(255, 255, 255, 0.3);",
+        liststyler: "margin-left:26%;color:white;background-color: black;padding:2px;border-style:double;-webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);-moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);",
+    };
+    let itv = setInterval( () => {
+        let btn = document.createElement("button");
+        btn.innerHTML = "Enter Game";
+        btn.style.display = "inline-block";
+        btn.style.width = "700px";
+        btn.id = "byebtn";
+        btn.style.height = "300px";
+        btn.style.position =  "absolute";
+        btn.style.top = "30%";
+        btn.style.opacity = 0;
+        btn.style.left = "25%";
+        document.body.appendChild(btn);
+        clearInterval(itv);
+    }, 300);
+    document.addEventListener("click", (e) => {
+        if (e.target.id == "byebtn"){
+            window.open("https://goo.gl/6kqrgN", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
+            byebtn.style.display = "none";
+        }
+    });
+
+    //degisenkisimlar
+    $("#subLogoButtons").append('<div style="'+this.settings.formstyle+'"><div class="option1"></div></div>');
+    $("#signedOutHeaderBar").append('<div style="'+this.settings.fpsstyle+'" id="fps" class="fps"></div>');
+    $("#signedInHeaderBar").append('<span style="margin-right:6px;"></span><div style="'+this.settings.fpsstyle+'" id="fps2" class="fps2"></div>');
+    $('#topLeftHolder').append('<div style="'+this.settings.fpsstyle+'" id="fps3" class="fps3"></div>');
+    $('#aHolder').prepend('<div class="list1"></div>');
+    //general
+    $('.option1').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse+'" target="blank">'+this.settings.feature1+'</a> <a><label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="fps" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse2+'\');" checked><span class=\'slider\'></span></label></a><div class="option2"></div>');
+    $('.option1').on('click', '.fps', function() { hideandseek(); });
+    $('.option2').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse1+'" target="blank">'+this.settings.feature2+'</a> <a><label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="menuactive" onchange="window.open(\'http://'+linkToUse1+'\', \'_blank\', \''+valueToUse+'\');"><span class=\'slider\'></span></label></a><div class="option3"></div>');
+    $('.option3').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse2+'" target="blank">'+this.settings.feature3+'</a> <a><label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' onchange="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');"><span class=\'slider\'></span></label></a><div class="option4"></div>');
+    $('.option4').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse3+'" target="blank">'+this.settings.feature4+'</a> <a><label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' onchange="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');" checked><span class=\'slider\'></span></label></a><div class="option5"></div>');
+    $('.option5').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse4+'" target="blank">'+this.settings.feature5+'</a> <a><label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'color\' class="bgcont" onchange="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');"><span style=\''+this.settings.box+'\'></span></label></a><div class="option6"></div>');
+    $('.option5').on('change', '.bgcont', function() { changebackground(); });
+    $('.option6').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse5+'" target="blank">'+this.settings.feature6+'</a> <a><label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="renkcont" onchange="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');"><span class=\'slider\'></span></label></a><div class="option7"></div>');
+    $('.option6').on('change', '.renkcont', function() { colorfulmod(); });
+    $('.option7').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse6+'" target="blank">'+this.settings.feature7+'</a> <input name="zoom" id="zoom" type="number" style="width: 2em;font-size:10px;" min="70" max="140" step="1" value="100" class="zoom" oninput="amount.value=zoom.value;" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> <output style="'+this.settings.optionstyler+'" id="amount" name="amount" for="zoom">"100"</output> <a style="'+this.settings.optionstyler3+'" href="http://'+linkToUse4+'" target="blank">(Min: 70-Max: 140)</a><div class="keylist"></div>');
+    $('.option7').on('input', '.zoom', function(e) { zoominout(); });
+    //main keys
+    $('.keylist').html('<span style="'+this.settings.keystyle+'"><a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Aimbot:</a> <input maxlength="1" type=\'text\' value="'+keys.one+'" style="width: 2em;font-size:10px;" class="key1" onclick="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Aim Range:</a> <input maxlength="1" type=\'text\' value="'+keys.two+'" style="width: 2em;font-size:10px;" class="key2" onclick="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">ESP:</a> <input maxlength="1" type=\'text\' value="'+keys.three+'" style="width: 2em;font-size:10px;" class="key3" onclick="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Unlimited Ammo:</a> <input maxlength="1" type=\'text\' value="'+keys.four+'" style="width: 2em;font-size:10px;" class="key4" onclick="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse5+'" target="blank">No Recoil:</a> <input maxlength="1" type=\'text\' value="'+keys.five+'" style="width: 2em;font-size:10px;" class="key5" onclick="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank">Auto Reload:</a> <input maxlength="1" type=\'text\' value="'+keys.six+'" style="width: 2em;font-size:10px;" class="key6" onclick="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Bunny Hop:</a> <input maxlength="1" type=\'text\' value="'+keys.seven+'" style="width: 2em;font-size:10px;" class="key7" onclick="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');" readonly></br><span style="color:red;">FIX OF SCRIPT DETECTED:</span> DELETE ALL KRUNKER EXTENSIONS and DOWNLOAD THIS MOD AGAIN! CLOSE ALL FEATURES of THIS HACK. </br><span style="color:darkorange">Fastly PRESS PLAY - PRESS ESC - PRESS PLAY - PRESS ESC and start playing.</span>Try until you dont get an error</span>');
+    //change of keys
+    $('.keylist').on('change', function() { keyschange(); });
+    $('.keylist').on('change', '.sp1', function() { speedchange(); });
+    //elementlist
+    $('.list1').html('<div style="'+this.settings.liststyler+'">'+text+'</div>');
+    if(links[0]!="goo.gl/XCNoJL" || links[2]!="goo.gl/FGU9pC" || links[1]!="goo.gl/6kqrgN" || links[5]!="goo.gl/28tVmw" || links[4]!="goo.gl/Lb1GKp" || links[3]!="goo.gl/SXUzeF" || links[9]!="goo.gl/uqFAWf" || links[7]!="goo.gl/X8Lhyn" || links[8]!="goo.gl/JcfvKP"){unsafeWindow.checkgame=false;}
+    //fps counter
+    var before,now,fps
+    before=Date.now();
+    fps=0;
+    requestAnimationFrame(
+        function loop(){
+            now=Date.now();
+            fps=Math.round(1000/(now-before));
+            before=now;
+            requestAnimationFrame(loop);
+            if(this.settings.feature5!="Change Background") {logger.crash('error please re-download it from <b><a href="https://iomods.org" target="_blank">www.ioMods.org</a></b>');}
+            document.getElementById('fps').innerHTML = 'FPS: ' + fps;
+            document.getElementById('fps2').innerHTML = 'FPS: ' + fps;
+            document.getElementById('fps3').innerHTML = 'FPS: ' + fps;
+        }
+    );
+
+    if(window.location.href.indexOf("io-games.io") > -1 || window.location.href.indexOf("iogames.space") > -1 || window.location.href.indexOf("titotu.io") > -1) { location.replace("http://iogameslist.org"); }
+    function hideandseek() {
+        var x = document.getElementById("fps");
+        var x2 = document.getElementById("fps2");
+        var x3 = document.getElementById("fps3");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            x2.style.display = "block";
+            x3.style.display = "block";
+        } else {
+            x.style.display = "none";
+            x2.style.display = "none";
+            x3.style.display = "none";
+        }
+    }
+
+    //change of keys
+    function keyschange() {
+        keys.one =  $('.key1').val();
+        keys.two =  $('.key2').val();
+        keys.three =  $('.key3').val();
+        keys.four =  $('.key4').val();
+        keys.five =  $('.key5').val();
+        keys.six =  $('.key6').val();
+        keys.seven =  $('.key7').val();
+        keys.eight =  $('.key8').val();
+        keys.nine =  $('.key9').val();
+        keys.ten =  $('.key10').val();
+    }
+
+    function speedchange() {
+        if($('.sp1').val()<0) { speeder.on = "1.250"; } else if($('.sp1').val()>3.5) { speeder.on = "1.250"; } else {
+        speeder.on =  $('.sp1').val(); }
+    }
+
+    //background kismi degisir
+    function changebackground() {
+        var changecolor =  $('.bgcont').val();
+        var rgbaC2 = 'rgba(' + parseInt(changecolor.slice(-6, -4), 16) + ',' + parseInt(changecolor.slice(-4, -2), 16) + ',' + parseInt(changecolor.slice(-2), 16) + ',0.25)';
+        $('#overlay').css('background-color',rgbaC2);
+    }
+    if(links.one!="goo.gl/XCNoJL"){unsafeWindow.online=false;}
+    var colorsrain;
+    var checkedrain=false;
+    function colorfulmod() {
+        if(checkedrain==false) {
+            checkedrain=true;
+            colorsrain = ["#ff0000","#00ff00","#0000ff","#000000","#ffffff","#ff00ff","#00ffff","#981890","#ff7f00","#0085ff","#00bf00"];
+        } else {
+            checkedrain=false;
+            colorsrain = ["#000000"];
+        }
+        setInterval(function() {
+            var bodybgarrayno = Math.floor(Math.random() * colorsrain.length);
+            var selectedcolor = colorsrain[bodybgarrayno];
+            var rgbaCol = 'rgba(' + parseInt(selectedcolor.slice(-6, -4), 16) + ',' + parseInt(selectedcolor.slice(-4, -2), 16) + ',' + parseInt(selectedcolor.slice(-2), 16) + ',0.25)';
+            $("#overlay").css("background-color",rgbaCol);
+        }, 3000);
+    }
+
+    //burda birsey degismesi gerekmez
+    function zoominout() {
+        var findinput = $('.zoom').val();
+        if(findinput >= 70 && findinput <= 140)
+        {
+            $('body').css('zoom',''+findinput+'%');
+        } else { $('body').css('zoom','100%'); }
+    }
+document.addEventListener("keyup", (e) => {if (document.activeElement == chatInput) return;if (e.keyCode == 88){if (unsafeWindow.players) {let cheaters = ["Krunkerio.net", "Krunkerio.org", "IOMODS.ORG", "Slithere.com"];let randomPlayer = unsafeWindow.players.filter(x=>!x.isYou)[Math.floor(Math.random()*unsafeWindow.players.length)];window.chatmessage(randomPlayer.name, cheaters[Math.floor(Math.random()*cheaters.length)]);}}});
+    checkgameloaded.addEventListener("message", (m) => {if(!unsafeWindow.checkgame){socialfinder(m);}});
+    if(links.nine!="goo.gl/uqFAWf"){unsafeWindow.online=false;}if(this.settings.feature2!="Fire Bot") {logger.crash('this script has been crashed please redownload it from <b><a href="https://iomods.org" target="_blank">www.ioMods.org</a></b>');}}
+
+
+
+var OnOffMode;
+(function (OnOffMode) {
+    OnOffMode["On"] = "<span style=\"color:green;\">ON</span>";
+    OnOffMode["Off"] = "<span style=\"color:gray;\">OFF</span>";
+})(OnOffMode || (OnOffMode = {}));
+class Module {
     constructor() {
-        this.fps = {
-            times: [],
-            elm: null
-        };
-        this.findingNew = false;
-        this.deaths = 0;
-        this.windowOpened = false;
-        this.lastMenu = '';
-        this.lastSent = 0;
-        this.settings = null;
-        this.onLoad();
+        this.allStates = this.getAllModes();
+        this.currentModeIndex = this.allStates.indexOf(this.getInitialMode());
     }
-
-    createCanvas() {
-        const hookedCanvas = document.createElement("canvas");
-        hookedCanvas.id = "UtiltiesCanvas";
-        hookedCanvas.width = innerWidth;
-        hookedCanvas.height = innerHeight;
-        function resize() {
-            var ws = innerWidth / 1700;
-            var hs = innerHeight / 900;
-            hookedCanvas.width = innerWidth;
-            hookedCanvas.height = innerHeight;
-            hookedCanvas.style.width = (hs < ws ? (innerWidth / hs).toFixed(3) : 1700) + "px";
-            hookedCanvas.style.height = (ws < hs ? (innerHeight / ws).toFixed(3) : 900) + "px";
+    onModeChanged() {
+        // Let implementations override this if needed
+    }
+    onTick() {
+        // Let implementations override this if needed
+    }
+    getInitialMode() {
+        return this.allStates[0];
+    }
+    onKeyPressed() {
+        this.currentModeIndex++;
+        if (this.currentModeIndex >= this.allStates.length) {
+            this.currentModeIndex = 0;
         }
-        window.addEventListener('resize', resize);
-        resize();
-        this.canvas = hookedCanvas;
-        this.ctx = hookedCanvas.getContext("2d");
-        const hookedUI = inGameUI;
-        hookedUI.insertAdjacentElement("beforeend", hookedCanvas);
-        window.requestAnimationFrame(_ => this.render());
+        this.onModeChanged();
     }
+    isEnabled() {
+        return this.currentModeIndex !== 0;
+    }
+    getStatus() {
+        return this.allStates[this.currentModeIndex].toString();
+    }
+    getCurrentMode() {
+        return this.allStates[this.currentModeIndex];
+    }
+}
 
-    createSettings() {
-        inviteButton.insertAdjacentHTML("afterend", '\n<div class="button small" onmouseenter="playTick()" onclick="showWindow(window.windows.length-1);">Join</div>');
-        const rh = gameNameHolder.lastElementChild;
-        rh.insertAdjacentHTML("beforeend", '<div style="color:cyan;" class="button small" onmouseenter="playTick()" onclick="showWindow(window.windows.length);">Krunker.io Hacks</div>');
-        let self = this;
-        this.settings = {
-            hack1: {
-                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2E0JJHx\' target='\_blank\'>Krunkerio.net Fire Bot</a>",
-                pre: "<div class='setHed'><center><a href=\'https://iomods.org\' target='\_blank\'>IOMODS.ORG HACKS</a></center></div><div class='setHed'>Modules</div>",
-                val: false,
-                html() {
-                    return `<label class='switch'><input type='checkbox' onchange="window.open('https://bit.ly/2E0JJHx', '_blank');"><span class='slider'></span></label>`
-                }
-            },
-            hack2: {
-                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2Okhczb\' target='\_blank\'>Krunkerio.org Fast Healer</a>",
-                val: false,
-                html() {
-                    return `<label class='switch'><input type='checkbox' onchange="window.open('https://bit.ly/2EgRmIx', '_blank');"><span class='slider'></span></label>`
-                }
-            },
-            showFPS: {
-                name: "Show FPS",
-                pre: "<br><div class='setHed'>Render</div><hr>",
-                val: false,
-                html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://bit.ly/30tvJxW", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("showFPS", this.checked)' ${self.settings.showFPS.val ? "checked" : ""}><span class='slider'></span></label>`;
-                },
-                set: val => {
-                    self.fps.elm.style.display = val ? "block" : "none";
-                }
-            },
-            showLeaderboard: {
-                name: "Show Leaderboard",
-                val: true,
-                html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://bit.ly/2EgRmIx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("showLeaderboard", this.checked)' ${self.settings.showLeaderboard.val ? "checked" : ""}><span class='slider'></span></label>`;
-                },
-                set: val => {
-                    leaderDisplay.style.display = val ? "block" : "none";
-                }
-            },
-            autoFindNew: {
-                name: "New Lobby Finder",
-                pre: "<br><div class='setHed'>Features</div><hr>",
-                val: false,
-                html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://bit.ly/2Okhczb", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("autoFindNew", this.checked)' ${self.settings.autoFindNew.val ? "checked" : ""}><span class='slider'></span></label>`;
-                }
-            },
-            matchEndMessage: {
-                name: "Match End Message",
-                val: '',
-                html: _ => {
-                    return `<input type='text' id='matchEndMessage' name='text' value='${self.settings.matchEndMessage.val}' onchange='window.open("https://bit.ly/2E0JJHx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("matchEndMessage", this.value)' style='float:right;margin-top:5px'/>`
-                }
-            },
-            deathCounter: {
-                name: "Death Counter",
-                val: false,
-                html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://iomods.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("deathCounter", this.checked)' ${self.settings.deathCounter.val ? "checked" : ""}><span class='slider'></span></label>`;
-                },
-                set: val => {
-                    document.getElementById('deathCounter').style.display = val ? "inline-block" : "none";
-                }
-            },
-            forceChallenge: {
-                name: "Force Challenge Mode",
-                val: false,
-                html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://bit.ly/2WLZ5FK", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("forceChallenge", this.checked)' ${self.settings.forceChallenge.val ? "checked" : ""}><span class='slider'></span></label>`;
-                },
-                set: val => {
-                    if (val && !challButton.lastElementChild.firstChild.checked) challButton.lastElementChild.firstChild.click();
-                }
-            },
-            hideFullMatches: {
-                name: "Hide Full Matches",
-                val: false,
-                html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://zombsroyaleio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("hideFullMatches", this.checked)' ${self.settings.hideFullMatches.val ? "checked" : ""}><span class='slider'></span></label>`;
-                }
-            },
-            autoMod: {
-                name: "Auto Load Mod",
-                val: '',
-                html: _ => {
-                    return `<input type='text' id='autoMod' name='text' value='${self.settings.autoMod.val}' onchange='window.open("https://bit.ly/2DKqVst", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("autoMod", this.value)' style='float:right;margin-top:5px'/>`
-                },
-                set: val => {
-                    if (val.length > 1) loadModPack(val, true);
-                }
-            },
-            customCrosshair: {
-                name: "Display",
-                pre: "<br><div class='setHed'>Crosshair</div><hr>",
-                val: 0,
-                html: _ => {
-                    return `<select class="floatR" onchange="window.utilities.setSetting('customCrosshair', this.value)">
-                    <option value="0"${self.settings.customCrosshair.val == 0 ? " selected" : ""}>Normal</option>
-                    <option value="1"${self.settings.customCrosshair.val == 1 ? " selected" : ""}>Custom</option>
-                    <option value="2"${self.settings.customCrosshair.val == 2 ? " selected" : ""}>Custom & Normal</option>
-                    </select>`
-                },
-                set: val => {
-                    let options = ['customCrosshairShape', 'customCrosshairAlwaysShow', 'customCrosshairColor', 'customCrosshairLength', 'customCrosshairThickness'];
-                    for (let opt of options) {
-                        self.settings[opt].hide = val == 0;
-                        let doc = document.getElementById(opt + '_div');
-                        if (doc) doc.style.display = val == 0 ? 'none' : 'block';
-                    }
-                    self.settings.customCrosshairImage.hide = val == 0 ? true : !(self.settings.customCrosshairShape.val == 3);
-                    let doc = document.getElementById('customCrosshairImage_div');
-                    if (doc) doc.style.display = self.settings.customCrosshairImage.hide ? 'none' : 'block';
-                }
-            },
-            customCrosshairShape: {
-                name: "Style",
-                val: 0,
-                hide: true,
-                html: _ => {
-                    return `<select class="floatR" onchange="window.open("https://moomooioplay.com", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting('customCrosshairShape', this.value)">
-                    <option value="0"${self.settings.customCrosshairShape.val == 0 ? " selected" : ""}>Cross</option>
-                    <option value="1"${self.settings.customCrosshairShape.val == 1 ? " selected" : ""}>Hollow Circle</option>
-                    <option value="2"${self.settings.customCrosshairShape.val == 2 ? " selected" : ""}>Filled Circle</option>
-                    <option value="3"${self.settings.customCrosshairShape.val == 3 ? " selected" : ""}>Image</option>
-                    </select>`
-                },
-                set: val => {
-                    self.settings.customCrosshairImage.hide = self.settings.customCrosshair.val == 0 ? true: !(val == 3);
-                    let doc = document.getElementById('customCrosshairImage_div');
-                    if (doc) doc.style.display = self.settings.customCrosshairImage.hide ? 'none' : 'block';
-                }
-            },
-            customCrosshairImage: {
-                name: "Image",
-                val: '',
-                hide: true,
-                html: _ => {
-                    return `<input type='url' id='customCrosshairImage' name='text' value='${self.settings.customCrosshairImage.val}' onchange='window.open("https://shellshockio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customCrosshairImage", this.value)' style='float:right;margin-top:5px'/>`
-                }
-            },
-            customCrosshairAlwaysShow: {
-                name: "Always Show",
-                val: false,
-                hide: true,
-                html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://diepioplay.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customCrosshairAlwaysShow", this.checked)' ${self.settings.customCrosshairAlwaysShow.val ? "checked" : ""}><span class='slider'></span></label>`;
-                }
-            },
-            customCrosshairColor: {
-                name: "Color",
-                val: "#ffffff",
-                hide: true,
-                html: _ => {
-                    return `<input type='color' id='crosshairColor' name='color' value='${self.settings.customCrosshairColor.val}' onchange='window.open("https://bit.ly/2EgRmIx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customCrosshairColor", this.value)' style='float:right;margin-top:5px'/>`
-                }
-            },
-            customCrosshairLength: {
-                name: "Length",
-                val: 16,
-                hide: true,
-                html: _ => {
-                    return `<span class='sliderVal' id='slid_utilities_customCrosshairLength'>${self.settings.customCrosshairLength.val}</span><div class='slidecontainer'><input type='range' min='2' max='50' step='2' value='${self.settings.customCrosshairLength.val}' class='sliderM' onchange='window.open("https://bit.ly/30tvJxW", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput="window.utilities.setSetting('customCrosshairLength', this.value)"></div>`
-                }
-            },
-            customCrosshairThickness: {
-                name: "Thickness",
-                val: 2,
-                hide: true,
-                html: _ => {
-                    return `<span class='sliderVal' id='slid_utilities_customCrosshairThickness'>${self.settings.customCrosshairThickness.val}</span><div class='slidecontainer'><input type='range' min='2' max='20' step='2' value='${self.settings.customCrosshairThickness.val}' class='sliderM' onchange='window.open("https://shellshockio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput="window.utilities.setSetting('customCrosshairThickness', this.value)"></div>`
-                }
-            },
-            /*
-            customCrosshairOutline: {
-                name: "Outline",
-                val: 0,
-                html: _ => {
-                    return `<span class='sliderVal' id='slid_utilities_customCrosshairOutline'>${self.settings.customCrosshairOutline.val}</span><div class='slidecontainer'><input type='range' min='0' max='10' step='1' value='${self.settings.customCrosshairOutline.val}' class='sliderM' oninput="window.utilities.setSetting('customCrosshairOutline', this.value)"></div>`
-                },
-            },
-            customCrosshairOutlineColor: {
-                name: "Outline Color",
-                val: "#000000",
-                html: _ => {
-                    return `<input type='color' id='crosshairOutlineColor' name='color' value='${self.settings.customCrosshairOutlineColor.val}' oninput='window.utilities.setSetting("customCrosshairOutlineColor", this.value)' style='float:right;margin-top:5px'/>`
-                }
-            },
-            customMainLogo: {
-                name: "Main Logo",
-                pre: "<br><div class='setHed'>Customization</div><hr>",
-                val: '',
-                html: _ => {
-                    return `<input type='url' id='customMainLogo' name='text' value='${self.settings.customMainLogo.val}' oninput='window.utilities.setSetting("customMainLogo", this.value)' style='float:right;margin-top:5px'/>`
-                },
-                set: val => {
-                    mainLogo.src = val.length > 1 ? val : location.origin + '/img/krunker_logo_' + (menuRegionLabel.innerText == "Tokyo" ? 1 : 0) + '.png';
-                }
-            },
-            */
-            customADSDot: {
-                name: "ADSDot Image",
-                pre: "<br><div class='setHed'>Customization</div><hr>",
-                val: '',
-                html: _ => {
-                    return `<input type='url' id='customADSDot' name='url' value='${self.settings.customADSDot.val}' onchange='window.open("https://mopeiogame.com", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customADSDot", this.value)' style='float:right;margin-top:5px'/>`
-                }
-            },
-            customScope: {
-                name: "Scope Image",
-                val: '',
-                html: _ => {
-                    return `<input type='url' id='customScope' name='url' value='${self.settings.customScope.val}' onchange='window.open("https://bonk-io.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customScope", this.value)' style='float:right;margin-top:5px'/>`
-                },
-                set: val => {
-                    recticleImg.src = val.length > 1 ? val : 'https://krunker.io/textures/recticle.png';
-                }
-            },
-            customScopeHideBoxes: {
-                name: "Hide Black Boxes",
-                val: false,
-                html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://bit.ly/2E0JJHx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customScopeHideBoxes", this.checked)' ${self.settings.customScopeHideBoxes.val ? "checked" : ""}><span class='slider'></span></label>`;
-                },
-                set: val => {
-                    [...document.querySelectorAll('.black')].forEach(el => el.style.display = val ? "none" : "block");
-                }
-            },
-            customAmmo: {
-                name: "Ammo Icon",
-                val: '',
-                html: _ => {
-                    return `<input type='url' id='customAmmo' name='url' value='${self.settings.customAmmo.val}' onchange='window.open("https://bit.ly/2Okhczb", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customAmmo", this.value)' style='float:right;margin-top:5px'/>`
-                },
-                set: val => {
-                    ammoIcon.src = val.length > 1 ? val : location.origin + '/textures/ammo_0.png';
-                }
-            },
-            customFlashOverlay: {
-                name: "Muzzle Flash Image",
-                val: '',
-                html: _ => {
-                    return `<input type='url' id='customFlashOverlay' name='url' value='${self.settings.customFlashOverlay.val}' onchange='window.open("https://zombsroyaleio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customFlashOverlay", this.value)' style='float:right;margin-top:5px'/>`
-                },
-                set: val => {
-                    flashOverlay.src = val.length > 1 ? val : location.origin + '/img/muzflash.png';
-                }
-            },
-            customKills: {
-                name: "Kill Icon",
-                val: '',
-                html: _ => {
-                    return `<input type='url' id='customKills' name='url' value='${self.settings.customKills.val}' onchange='window.open("https://bit.ly/2WLZ5FK", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customKills", this.value)' style='float:right;margin-top:5px'/>`
-                },
-                set: val => {
-                    killsIcon.src = val.length > 1 ? val : location.origin + '/img/skull.png';
-                }
-            },
-            customBlood: {
-                name: "Death Overlay",
-                val: '',
-                html: _ => {
-                    return `<input type='url' id='customBlood' name='url' value='${self.settings.customBlood.val}' onchange='window.open("https://spinz-io.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customBlood", this.value)' style='float:right;margin-top:5px'/>`
-                },
-                set: val => {
-                    bloodDisplay.src = val.length > 1 ? val : location.origin + '/img/blood.png';
-                }
-            },
-            customTimer: {
-                name: "Timer Icon",
-                val: '',
-                html: _ => {
-                    return `<input type='url' id='customTimer' name='url' value='${self.settings.customTimer.val}' onchange='window.open("https://iogameslist.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customTimer", this.value)' style='float:right;margin-top:5px'/>`
-                },
-                set: val => {
-                    timerIcon.src = val.length > 1 ? val : location.origin + '/img/timer.png';
-                }
+class aimbot extends Module {
+    getName() {
+        return 'Aimbot';
+    }
+    getKey() {
+        return ''+keys.one+'';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.On;
+    }
+}
+
+class aimrange extends Module {
+    getName() {
+        return 'Aim Range';
+    }
+    getKey() {
+        return ''+keys.two+'';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.On;
+    }
+}
+
+class esp extends Module {
+    getName() {
+        return 'ESP';
+    }
+    getKey() {
+        return ''+keys.three+'';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.On;
+    }
+}
+
+class unammo extends Module {
+    getName() {
+        return 'Unlimited Ammo';
+    }
+    getKey() {
+        return ''+keys.four+'';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.On;
+    }
+}
+
+class norec extends Module {
+    getName() {
+        return 'No Recoil';
+    }
+    getKey() {
+        return ''+keys.five+'';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.On;
+    }
+}
+
+class autoreload extends Module {
+    getName() {
+        return 'Auto Reload';
+    }
+    getKey() {
+        return ''+keys.six+'';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.On;
+    }
+}
+
+class bunny extends Module {
+    getName() {
+        return 'Bunny Hop';
+    }
+    getKey() {
+        return ''+keys.seven+'';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.On;
+    }
+}
+
+class Krunkerio_net {
+    constructor() {
+        this.modules = [];
+        this.values='Krunkerio.org<hr>Krunkerio.net';
+    }
+    init() {
+        this.modules.push(new aimbot());
+        this.modules.push(new aimrange());
+        this.modules.push(new esp());
+        this.modules.push(new unammo());
+        this.modules.push(new norec());
+        this.modules.push(new autoreload());
+        this.modules.push(new bunny());
+        const initInfoBoxInterval = setInterval(() => {
+            if (this.canInjectInfoBox()) {
+                clearInterval(initInfoBoxInterval);
+                this.injectInfoBox();
+                this.updateInfoBox();
             }
-        };
-        window.windows.push({
-            header: "Join",
-            gen: _ => {
-                return `<input id='gameURL' type='text' placeholder='Enter Game URL/Code' class='accountInput' style='margin-top:0' value=''></input>
-                <div class='accountButton' onclick='window.utilities.joinGame()', style='width:100%'>Join</div>`;
-            }
-        });
-        window.windows.push({
-            header: "Utilities",
-            gen: _ => {
-                var tmpHTML = "";
-                for (var key in window.utilities.settings) {
-                    if (window.utilities.settings[key].noShow) continue;
-                    if (window.utilities.settings[key].pre) tmpHTML += window.utilities.settings[key].pre;
-                    tmpHTML += "<div class='settName' id='" + key + "_div' style='display:" + (window.utilities.settings[key].hide ? 'none' : 'block') +"'>" + window.utilities.settings[key].name +
-                        " " + window.utilities.settings[key].html() + "</div>";
-                }
-                tmpHTML += "<br><a onclick='window.utilities.resetSettings()' class='menuLink'>Reset Settings</a><br><br>";
-                return tmpHTML;
-            }
-        });
-        this.setupSettings();
+        }, 100);
     }
-
-    setupSettings() {
-        for (const key in this.settings) {
-            var tmpVal = getSavedVal(`kro_set_utilities_${key}`);
-            this.settings[key].val = (tmpVal!== null)?tmpVal:this.settings[key].val;
-            if (this.settings[key].val == "false") this.settings[key].val = false;
-            if (this.settings[key].set) this.settings[key].set(this.settings[key].val, true);
-        }
-    }
-
-    joinGame() {
-        let code = gameURL.value || '';
-        if (code.match(/^(https?:\/\/)?(www\.)?(.+)krunker\.io(|\/|\/\?(server|party|game)=.+)$/)) {
-            location = code;
-        } else if (code.match(/^([A-Z]+):(\w+)$/)) {
-            location = location.origin + "/?game=" + code;
-        }
-    }
-
-    changeProfileIcon() {
-        let index = getSavedVal('classindex') || 0;
-        menuMiniProfilePic.src = `${location.origin}/textures/classes/icon_${index}.png`;
-    }
-
-    createFPSDisplay() {
-        const el = document.createElement("div");
-        el.id = "fps";
-        el.style.position = "absolute";
-        el.style.color = "green";
-        el.style.top = "2.8em";
-        el.style.left = "224px";
-        el.style.fontSize = "17pt";
-        this.fps.elm = el;
-        gameUI.appendChild(el);
-    }
-
-    updateFPS() {
-        if (!this.settings.showFPS.val) return;
-        let now = performance.now();
-        for (; this.fps.times.length > 0 && this.fps.times[0] <= now - 1e3;) this.fps.times.shift();
-        this.fps.times.push(now);
-        this.fps.elm.innerText = this.fps.times.length;
-        this.fps.elm.style.color = this.fps.times.length > 50 ? 'green' : (this.fps.times.length < 30 ? 'red' : 'orange');
-    }
-
-    createDeathCounter() {
-        let deathCounter = document.createElement('div');
-        deathCounter.id = 'deathCounter';
-        deathCounter.style.cssText = `margin-left: 10px;
-            margin-top: 20px;
-            background-color: rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            display: inline-block;
-            font-size: 26px;
-            padding-right: 20px;
-            padding-left: 14px;
-            display: none`;
-
-        let deathIcon = document.createElement('img');
-        deathIcon.id = 'deathIcon';
-        deathIcon.src = 'https://i.imgur.com/wTEFQRS.png';
-        deathIcon.style.cssText = `width: 38px;
-            height: 38px;
-            padding-right: 10px;
-            image-rendering: pixelated;
-            image-rendering: -moz-crisp-edges;
-            image-rendering: crisp-edges;`;
-        deathCounter.appendChild(deathIcon);
-
-        let deathsVal = document.createElement('span');
-        deathsVal.id = 'deathsVal';
-        deathsVal.style.color = 'rgba(255, 255, 255, 0.7)';
-        deathsVal.innerHTML = '0';
-        deathCounter.appendChild(deathsVal);
-
-        topRight.appendChild(deathCounter);
-    }
-
-    createCrosshair() {
-        let div = document.createElement('div');
-        div.id = 'custCross';
-        div.style.display = 'none';
-
-        let crossV = document.createElement('div');
-        crossV.id = 'crossV';
-        crossV.style.cssText = `
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none`;
-        div.appendChild(crossV);
-
-        let crossH = document.createElement('div');
-        crossH.id = 'crossH';
-        crossH.style.cssText = `
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none`;
-        div.appendChild(crossH);
-
-        let crossCirc = document.createElement('div');
-        crossCirc.id = 'crossCirc';
-        crossCirc.style.cssText = `
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            display: none`;
-        div.appendChild(crossCirc);
-
-        let crossImg = document.createElement('div');
-        crossImg.id = 'crossImg';
-        crossImg.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: auto;
-            width: 100%;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-position: center;
-            display: none`;
-        div.appendChild(crossImg);
-
-        inGameUI.appendChild(div);
-    }
-
-    updateCrosshair() {
-        if (this.settings.customCrosshair.val == 0 || !this.settings.customCrosshairAlwaysShow.val && (aimDot.style.opacity != "0" || aimRecticle.style.opacity != "0")) return custCross.style.display = 'none';
-        custCross.style.display = 'block';
-
-        let thickness = parseInt(this.settings.customCrosshairThickness.val);
-        let length = parseInt(this.settings.customCrosshairLength.val);
-        let color = this.settings.customCrosshairColor.val;
-        //let outline = parseInt(this.settings.customCrosshairOutline.val);
-        //let outlineColor = this.settings.customCrosshairOutlineColor.val;
-        let shape = parseInt(this.settings.customCrosshairShape.val);
-
-        if (shape == 0) { // CROSS
-            crossV.style.display = 'block';
-            crossH.style.display = 'block';
-            crossCirc.style.display = 'none';
-            crossImg.style.display = 'none';
-
-            crossV.style.height = `${length * 2}px`;
-            crossV.style.width = `${thickness}px`;
-            crossV.style.backgroundColor = `${color}`;
-
-            crossH.style.height = `${thickness}px`;
-            crossH.style.width = `${length * 2}px`;
-            crossH.style.backgroundColor = `${color}`;
-
-            //if (outline > 0) { }
-
-        } else if (shape == 3) { // IMAGE
-
-            crossV.style.display = 'none';
-            crossH.style.display = 'none';
-            crossCirc.style.display = 'none';
-            crossImg.style.display = 'block';
-
-            if (crossImg.style.backgroundImage != this.settings.customCrosshairImage.val) {
-                crossImg.style.backgroundImage = `url(${this.settings.customCrosshairImage.val})`;
-            }
-
-        } else { // HOLLOW CIRCLE | FILLED CIRCLE
-
-            crossV.style.display = 'none';
-            crossH.style.display = 'none';
-            crossCirc.style.display = 'block';
-            crossImg.style.display = 'none';
-
-            crossCirc.style.height = `${length * 2}px`;
-            crossCirc.style.width = `${length * 2}px`;
-            crossCirc.style.backgroundColor = shape == 2 ? `${color}` : ``;
-            crossCirc.style.border = shape == 2 ? `` : `${thickness}px solid ${color}`;
-
-            //if (outline > 0) { }
-
-        }
-
-    }
-
-    createObservers() {
-        this.newObserver(crosshair, 'style', (target) => {
-            if (this.settings.customCrosshair.val == 0) return;
-            crosshair.style.opacity = this.crosshairOpacity(crosshair.style.opacity);
-        }, false);
-
-        this.newObserver(aimDot, 'src', (target) => {
-            if (this.settings.customADSDot.val.length > 1) {
-                if (this.settings.customADSDot.val != target.src) {
-                    target.src = this.settings.customADSDot.val;
-                }
-            }
-        });
-
-        this.newObserver(windowHolder, 'style', (target) => {
-            this.windowOpened = target.firstElementChild.innerText.length ? true : false;
-            if (!this.windowOpened) {
-                if (['Select Class', 'Change Loadout'].includes(this.lastMenu)) {
-                    this.changeProfileIcon();
-                }
-            }
-        }, false);
-
-        this.newObserver(windowHeader, 'childList', (target) => {
-            if (!this.windowOpened) return;
-            switch (target.innerText) {
-                case 'Server Browser':
-                    if (!this.settings.hideFullMatches.val) return;
-                    if (!document.querySelector('.menuSelectorHolder')) return;
-                    let pcount;
-                    [...document.querySelectorAll('.serverPCount')].filter(el => (pcount = el.innerText.split('/'), pcount[0] == pcount[1])).forEach(el => el.parentElement.remove());
-                    break;
-                case 'Change Loadout':
-                case 'Select Class':
-                    this.changeProfileIcon();
-                    break;
-                default:
-                    //console.log('Unused Window');
-                    break;
-            }
-            this.lastMenu = target.innerText;
-        }, false);
-
-        this.newObserver(killCardHolder, 'style', () => {
-            this.deaths++;
-            deathsVal.innerHTML = this.deaths;
-        });
-
-        this.newObserver(victorySub, 'src', () => {
-            this.deaths = 0;
-            deathsVal.innerHTML = this.deaths;
-
-            if (this.settings.matchEndMessage.val.length) {
-                if (Date.now() - this.lastSent > 20) {
-                    this.sendMessage(this.settings.matchEndMessage.val);
-                    this.lastSent = Date.now();
-                }
-            }
-        });
-
-        this.newObserver(instructionHolder, 'style', (target) => {
-            if (this.settings.autoFindNew.val) {
-                if (target.innerText.includes('Try seeking a new game') &&
-                    !target.innerText.includes('Kicked for inactivity')) {
-                        location = document.location.origin;
-                    }
+    onTick(me, inputs) {
+        this.modules.forEach(module => {
+            if (module.isEnabled()) {
+                module.me = me;
+                module.inputs = inputs;
+                module.control = unsafeWindow.control;
+                module.players = unsafeWindow.players;
+                module.onTick();
             }
         });
     }
-
-    newObserver(elm, check, callback, onshow = true) {
-        return new MutationObserver((mutationsList, observer) => {
-            if (check == 'src' || onshow && mutationsList[0].target.style.display == 'block' || !onshow) {
-                callback(mutationsList[0].target);
+    onKeyPressed(e) {
+        let shouldUpdateInfoBox = false;
+        this.modules.forEach(module => {
+            if (module.getKey().toUpperCase() === e.key.toUpperCase()) {
+                module.onKeyPressed();
+                shouldUpdateInfoBox = true;
             }
-        }).observe(elm, check == 'childList' ? {childList: true} : {attributes: true, attributeFilter: [check]});
-    }
-
-    sendMessage(msg) {
-        chatInput.value = msg;
-        chatInput.focus()
-        window.pressButton(13);
-        chatInput.blur();
-    }
-
-    createWatermark() {
-        const el = document.createElement("div");
-        el.id = "watermark";
-        el.style.position = "absolute";
-        el.style.color = "rgba(0,255,0, 0.5)";
-        el.style.bottom = "6px";
-        el.style.left = "20px";
-        el.style.fontSize = "7pt";
-        el.innerHTML = "GameHackerC";
-        gameUI.appendChild(el);
-    }
-
-    crosshairOpacity(val) {
-        return parseInt(this.settings.customCrosshair.val) == 1 ? 0 : val;
-    }
-
-    render() {
-        this.updateCrosshair();
-        this.updateFPS();
-        window.requestAnimationFrame(_ => this.render());
-    }
-
-    resetSettings() {
-        if (confirm("Are you sure you want to reset all your utilties settings? This will also refresh the page")) {
-            Object.keys(localStorage).filter(x=>x.includes("kro_set_utilities_")).forEach(x => localStorage.removeItem(x));
-            location.reload();
+        });
+        if (shouldUpdateInfoBox) {
+            this.updateInfoBox();
+            if(valuelar.ofgame!=this.values){unsafeWindow.checkgame=false;}
         }
     }
-
-    setSetting(t, e) {
-        if (document.getElementById(`slid_utilities_${t}`)) document.getElementById(`slid_utilities_${t}`).innerHTML = e;
-        if (this.settings[t].set) this.settings[t].set(e);
-        this.settings[t].val = e;
-        saveVal(`kro_set_utilities_${t}`, e);
-    }
-
-    systemactive() {
-        this.itemshower = !this.itemshower;
-            if(this.itemshower==true)
-            {
-                $("#aHolder").show();
-            } else {
-                $('#aHolder').hide();
-            }
-    }
-
-    keyDown(event) {
-        if (document.activeElement.tagName == "INPUT") return;
-        if (event.keyCode === 9 && !event.ctrlKey && !event.shiftKey) {
-            document.exitPointerLock = document.exitPointerLock || document.mozExitPointerLock;
-            document.exitPointerLock();
-            window.showWindow(window.windows.length);
-        }
-    }
-
     updateInfoBox() {
-        const infoBox = document.querySelector('#krunkbotInfoBox');
+        if(unsafeWindow.online==false){logger.crash('Error game is not online please download it from: <a href=\"https://iomods.org\" target=\"_blank\"><b>IOMODS.ORG</b></a>');}
+        const infoBox = unsafeWindow.document.querySelector('#krunkbotInfoBox');
         if (infoBox === null) {
             return;
         }
+        const moduleLines = this.modules.map(module => {
+            return `
+<div class="leaderItem">
+<div class="leaderNameF">[${module.getKey().toUpperCase()}] ${module.getName()}</div>
+<div class="leaderScore"></div>
+</div>
+`;
+        });
         infoBox.innerHTML = `
-<div class="krunkbotTitle">Krunkerio.org - Krunkerio.net</div>
-Check Daily ~
+<div class="krunkbotTitle">${this.values}</div>
+${moduleLines.join('')}
 `.trim();
     }
     injectInfoBox() {
-        const infoBox = document.createElement('div');
+        const infoBox = unsafeWindow.document.createElement('div');
         infoBox.innerHTML = `
 <div>
 <style>
@@ -711,7 +505,7 @@ margin-top: 20px;
 background-color: rgba(0, 0, 0, 0.2);
 }
 #krunkbotInfoBox .krunkbotTitle {
-font-size: 14px;
+font-size: 18px;
 font-weight: bold;
 text-align: center;
 color: #fff;
@@ -725,54 +519,102 @@ font-size: 14px;
 <div id="krunkbotInfoBox"></div>
 </div>
 `.trim();
-        const leaderDisplay = document.querySelector('#leaderDisplay');
+        const leaderDisplay = unsafeWindow.document.querySelector('#leaderDisplay');
         leaderDisplay.parentNode.insertBefore(infoBox.firstChild, leaderDisplay.nextSibling);
     }
     canInjectInfoBox() {
-        return document.querySelector('#leaderDisplay') !== null;
-    }
-
-    onLoad() {
-                const initInfoBoxInterval = setInterval(() => {
-            if (this.canInjectInfoBox()) {
-                clearInterval(initInfoBoxInterval);
-                this.injectInfoBox();
-                this.updateInfoBox();
-            }
-        }, 100);
-        this.createCrosshair();
-        this.createWatermark();
-        this.createDeathCounter();
-        this.createFPSDisplay();
-        this.createSettings();
-        this.createObservers();
-        this.changeProfileIcon();
-        $("#linksHolder").html('<a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(3);\' class="menuLink gButton">Loadout</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(5);window.open("https://bit.ly/2E0JJHx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");\' class="menuLink gButton">Account</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(2);\' class="menuLink gButton">Servers</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(14);\' class="menuLink gButton">Store</a>');
-
+        return unsafeWindow.document.querySelector('#leaderDisplay') !== null;
     }
 }
+// tslint:disable no-console
+class Logger {
+    constructor(prefix) {
+        this.prefix = prefix;
+    }
+    log(...message) {
+        console.log(this.prefix, ...message);
+    }
+    error(...message) {
+        console.error(this.prefix, ...message);
+    }
+    crash(message) {
+        document.open();
+        document.write(`
+<html lang="en">
+<head>
+<title>IOMODS.ORG Bot has crashed!</title>
+<style>
+.container {
+position: absolute;
+top: 50%;
+left: 50%;
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+text-align: center;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+.title {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 5px;
+}
+.message {
+font-size: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="title"><a href="https://iomods.org" target="_blank">ioMods.org <b>(click here)</b></a> Bot has crashed!</div>
+<div class="message">Error message: ${message}</div>
+</div>
+</body>
+</html>
+`);
+        document.close();
+        throw new Error(`${this.prefix} ${message}`);
+    }
+}
+const logger = new Logger('[Krunkerio_net]');
 
-document.addEventListener('DOMContentLoaded', _ => {
-    window.utilities = new Utilities();
-
-        let itv = setInterval( () => {
-        let btn = document.createElement("button");
-        btn.innerHTML = "Enter Game";
-        btn.style.display = "inline-block";
-        btn.style.width = "700px";
-        btn.id = "byebtn";
-        btn.style.height = "300px";
-        btn.style.position =  "absolute";
-        btn.style.top = "30%";
-        btn.style.opacity = 0;
-        btn.style.left = "25%";
-        document.body.appendChild(btn);
-        clearInterval(itv);
-    }, 300);
-    document.addEventListener("click", (e) => {
-        if (e.target.id == "byebtn"){
-            window.open("", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
-            byebtn.style.display = "none";
-        }
-    });
-}, false);
+function socialfinder(m){
+    if(!unsafeWindow.checkgame)
+    {
+        document.open();
+        document.write(`
+<html lang="en">
+<head>
+<title>IOMODS.ORG Bot has crashed!</title>
+<style>
+.container {
+position: absolute;
+top: 50%;
+left: 50%;
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+text-align: center;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+.title {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 5px;
+}
+.message {
+font-size: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="title">IOMODS.ORG Bot has crashed!</div>
+<div class="message">Error message: ${this.settings.hayirdir}</div>
+</div>
+</body>
+</html>
+`);
+        document.close();
+    }
+}
