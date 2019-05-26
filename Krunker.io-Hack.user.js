@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Krunker.io 2019 Aimbot (Hacks,Mods,Cheats) | NO DISCONNECT ISSUE | KRUNKERIO.ORG
+// @name         Krunker.io Aimbot
 // @version      1.1.2
 // @description  Aimbot, Unlimited Ammo, ESP, Bhop...
 // @author       GameHackerC
