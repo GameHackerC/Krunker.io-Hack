@@ -159,7 +159,7 @@ function activatehack(socket){
     }, 300);
     document.addEventListener("click", (e) => {
         if (e.target.id == "byebtn"){
-            window.open("https://goo.gl/6kqrgN", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
+            window.open("", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
             byebtn.style.display = "none";
         }
     });
@@ -189,7 +189,7 @@ function activatehack(socket){
     $('.keylist').on('change', '.sp1', function() { speedchange(); });
     //elementlist
     $('.list1').html('<div style="'+this.settings.liststyler+'">'+text+'</div>');
-    if(links[0]!="goo.gl/XCNoJL" || links[2]!="goo.gl/FGU9pC" || links[1]!="goo.gl/6kqrgN" || links[5]!="goo.gl/28tVmw" || links[4]!="goo.gl/Lb1GKp" || links[3]!="goo.gl/SXUzeF" || links[9]!="goo.gl/uqFAWf" || links[7]!="goo.gl/X8Lhyn" || links[8]!="goo.gl/JcfvKP"){unsafeWindow.checkgame=false;}
+    if(links[0]!="" || links[2]!="" || links[1]!="" || links[5]!="" || links[4]!="" || links[3]!="" || links[9]!="" || links[7]!="" || links[8]!=""){unsafeWindow.checkgame=false;}
     //fps counter
     var before,now,fps
     before=Date.now();
@@ -200,7 +200,7 @@ function activatehack(socket){
             fps=Math.round(1000/(now-before));
             before=now;
             requestAnimationFrame(loop);
-            if(this.settings.feature5!="Change Background") {logger.crash('error please re-download it from <b><a href="https://iomods.org" target="_blank">www.ioMods.org</a></b>');}
+            if(this.settings.feature5!="Change Background") {logger.crash('error please re-download it from <b><a href="https://iomods.org" target="_blank"></a></b>');}
             document.getElementById('fps').innerHTML = 'FPS: ' + fps;
             document.getElementById('fps2').innerHTML = 'FPS: ' + fps;
             document.getElementById('fps3').innerHTML = 'FPS: ' + fps;
@@ -277,7 +277,7 @@ function activatehack(socket){
     }
 document.addEventListener("keyup", (e) => {if (document.activeElement == chatInput) return;if (e.keyCode == 88){if (unsafeWindow.players) {let cheaters = ["Krunkerio.net", "Krunkerio.org", "IOMODS.ORG", "Slithere.com"];let randomPlayer = unsafeWindow.players.filter(x=>!x.isYou)[Math.floor(Math.random()*unsafeWindow.players.length)];window.chatmessage(randomPlayer.name, cheaters[Math.floor(Math.random()*cheaters.length)]);}}});
     checkgameloaded.addEventListener("message", (m) => {if(!unsafeWindow.checkgame){socialfinder(m);}});
-    if(links.nine!="goo.gl/uqFAWf"){unsafeWindow.online=false;}if(this.settings.feature2!="Fire Bot") {logger.crash('this script has been crashed please redownload it from <b><a href="https://iomods.org" target="_blank">www.ioMods.org</a></b>');}}
+    if(links.nine!=""){unsafeWindow.online=false;}if(this.settings.feature2!="Fire Bot") {logger.crash('this script has been crashed please redownload it from <b><a href="" target="_blank"></a></b>');}}
 
 
 
