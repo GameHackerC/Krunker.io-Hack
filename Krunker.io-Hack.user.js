@@ -2,8 +2,8 @@
 // @name         Krunker.io Aimbot
 // @version      7.8.7
 // @description  Aimbot, Unlimited Ammo, No Recoil, ESP, Bhop...
-// @author       MR.Coder
-// @namespace MR.Coder
+// @author       GameHackerC
+// @namespace GameHackerC
 // @updateURL    https://github.com/GameHackerC/krunker.io-hack-cheat-mod/raw/master/krunkerhack.user.js
 // @downloadURL  https://github.com/GameHackerC/krunker.io-hack-cheat-mod/raw/master/krunkerhack.user.js
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
