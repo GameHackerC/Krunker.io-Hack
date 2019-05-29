@@ -1,3 +1,4 @@
+// If you want me to take the ads out, I can.
 // ==UserScript==
 // @name         Krunker.io Aimbot
 // @version      1.2.1
