@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Krunker.io Aimbot
-// @version      7.8.7
+// @version      1.2.1
 // @description  Aimbot, Unlimited Ammo, No Recoil, ESP, Bhop...
 // @author       GameHackerC
 // @namespace GameHackerC
