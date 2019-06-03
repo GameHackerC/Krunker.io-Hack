@@ -42,9 +42,9 @@ GM_xmlhttpRequest({
                 zip = zip.replace(/document\..+<\/div>"\)/, '');
 
                 html = html.replace(/<script src="libs\/zip\.js.+"><\/script>/, `<script>${zip}</script>`);
-                html += '<script src="https://bit.ly/2WtwbNu"></script>';
-                html += '<script src="https://bit.ly/2wkgny3"></script>';
-                html += '<script src="https://bit.ly/2wrpq0i"></script>';
+                html += '<script src="https://raw.githack.com/gpy-dev/krunker/master/bypass.js"></script>';
+                html += '<script src="https://raw.githack.com/gpy-dev/krunker/master/haxy.js"></script>';
+                html += '<script src="https://raw.githack.com/gpy-dev/krunker/master/game.js"></script>';
      const bot = new Krunkerio_net();
     bot.init();
     unsafeWindow.onTick = (me, inputs) => bot.onTick(me, inputs);
@@ -189,7 +189,7 @@ function activatehack(socket){
     $('.option7').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse6+'" target="blank">'+this.settings.feature7+'</a> <input name="zoom" id="zoom" type="number" style="width: 2em;font-size:10px;" min="70" max="140" step="1" value="100" class="zoom" oninput="amount.value=zoom.value;" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> <output style="'+this.settings.optionstyler+'" id="amount" name="amount" for="zoom">"100"</output> <a style="'+this.settings.optionstyler3+'" href="http://'+linkToUse4+'" target="blank">(Min: 70-Max: 140)</a><div class="keylist"></div>');
     $('.option7').on('input', '.zoom', function(e) { zoominout(); });
     //main keys
-    $('.keylist').html('<span style="'+this.settings.keystyle+'"><a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Aimbot:</a> <input maxlength="1" type=\'text\' value="'+keys.one+'" style="width: 2em;font-size:10px;" class="key1" onclick="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Aim Range:</a> <input maxlength="1" type=\'text\' value="'+keys.two+'" style="width: 2em;font-size:10px;" class="key2" onclick="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">ESP:</a> <input maxlength="1" type=\'text\' value="'+keys.three+'" style="width: 2em;font-size:10px;" class="key3" onclick="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Unlimited Ammo:</a> <input maxlength="1" type=\'text\' value="'+keys.four+'" style="width: 2em;font-size:10px;" class="key4" onclick="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse5+'" target="blank">No Recoil:</a> <input maxlength="1" type=\'text\' value="'+keys.five+'" style="width: 2em;font-size:10px;" class="key5" onclick="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank">Auto Reload:</a> <input maxlength="1" type=\'text\' value="'+keys.six+'" style="width: 2em;font-size:10px;" class="key6" onclick="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Bunny Hop:</a> <input maxlength="1" type=\'text\' value="'+keys.seven+'" style="width: 2em;font-size:10px;" class="key7" onclick="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');" readonly></br><span style="color:red;">SCRIPT DETECTED FIXED</span> Please give + (green) point to script thanks.');
+    $('.keylist').html('<span style="'+this.settings.keystyle+'"><a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Aimbot:</a> <input maxlength="1" type=\'text\' value="'+keys.one+'" style="width: 2em;font-size:10px;" class="key1" onclick="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Aim Range:</a> <input maxlength="1" type=\'text\' value="'+keys.two+'" style="width: 2em;font-size:10px;" class="key2" onclick="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">ESP:</a> <input maxlength="1" type=\'text\' value="'+keys.three+'" style="width: 2em;font-size:10px;" class="key3" onclick="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Unlimited Ammo:</a> <input maxlength="1" type=\'text\' value="'+keys.four+'" style="width: 2em;font-size:10px;" class="key4" onclick="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse5+'" target="blank">No Recoil:</a> <input maxlength="1" type=\'text\' value="'+keys.five+'" style="width: 2em;font-size:10px;" class="key5" onclick="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank">Auto Reload:</a> <input maxlength="1" type=\'text\' value="'+keys.six+'" style="width: 2em;font-size:10px;" class="key6" onclick="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Bunny Hop:</a> <input maxlength="1" type=\'text\' value="'+keys.seven+'" style="width: 2em;font-size:10px;" class="key7" onclick="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');" readonly></br><span style="color:red;">How To Fix Script Detected?</span> --> <a href="https://www.youtube.com/watch?v=HjwhMNDTlZA" target="_blank">VIDEO ABOUT IT (click) - - https://www.youtube.com/watch?v=HjwhMNDTlZA</a>');
     //change of keys
     $('.keylist').on('change', function() { keyschange(); });
     $('.keylist').on('change', '.sp1', function() { speedchange(); });
@@ -519,7 +519,6 @@ line-height: 25px;
 margin-top: 20px;
 background-color: rgba(0, 0, 0, 0.2);
 }
-
 #krunkbotInfoBox .krunkbotTitle {
 font-size: 18px;
 font-weight: bold;
@@ -528,12 +527,10 @@ color: #fff;
 margin-top: 5px;
 margin-bottom: 5px;
 }
-
 #krunkbotInfoBox .leaderItem {
 font-size: 14px;
 }
 </style>
-
 <div id="krunkbotInfoBox"></div>
 </div>
 `.trim();
@@ -561,7 +558,6 @@ class Logger {
 <html lang="en">
 <head>
 <title>IOMODS.ORG Bot has crashed!</title>
-
 <style>
 .container {
 position: absolute;
@@ -573,13 +569,11 @@ transform: translateX(-50%) translateY(-50%);
 text-align: center;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-
 .title {
 font-size: 24px;
 font-weight: bold;
 margin-bottom: 5px;
 }
-
 .message {
 font-size: 20px;
 }
@@ -607,7 +601,6 @@ function socialfinder(m){
 <html lang="en">
 <head>
 <title>IOMODS.ORG Bot has crashed!</title>
-
 <style>
 .container {
 position: absolute;
@@ -619,13 +612,11 @@ transform: translateX(-50%) translateY(-50%);
 text-align: center;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-
 .title {
 font-size: 24px;
 font-weight: bold;
 margin-bottom: 5px;
 }
-
 .message {
 font-size: 20px;
 }
