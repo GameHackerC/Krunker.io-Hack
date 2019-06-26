@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Krunkbot
+// @name         Krunker.io Hacks
 // @version      8.1
 // @description  Krunker.io Hacks
 // @author       GameHackerC
