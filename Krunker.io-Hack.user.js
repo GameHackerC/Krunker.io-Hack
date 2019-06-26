@@ -4,8 +4,8 @@
 // @description  Krunker.io Hacks
 // @author       GameHackerC
 // @namespace GameHackerC
-// @updateURL    https://github.com/MrCoderN/krunker.io-hack-cheat-mod/raw/master/krunkerhack.user.js
-// @downloadURL  https://github.com/MrCoderN/krunker.io-hack-cheat-mod/raw/master/krunkerhack.user.js
+// @updateURL    	https://github.com/GameHackerC/Krunker.io-Hack/raw/master/Krunker.io-Hack.user.js
+// @downloadURL  	https://github.com/GameHackerC/Krunker.io-Hack/raw/master/Krunker.io-Hack.user.js
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @grant        GM_xmlhttpRequest
