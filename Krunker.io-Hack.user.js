@@ -89,13 +89,13 @@ function activatehack(socket){
     }
     //genel isimlendirme ve ayarlar
     this.settings = {
-        feature1: "Show FPS",
-        feature2: "Fire Bot",
+        feature1: "",
+        feature2: "",
         feature3: "Game Menu",
-        feature4: "Show ESP",
-        feature5: "Change Background",
-        feature6: "Rainbow Background",
-        feature7: "Zoom IN/OUT",
+        feature4: "",
+        feature5: "",
+        feature6: "",
+        feature7: "",
         string: "<a style=\"padding-right: 12px;\"></a> <font color=\"black\">-</font> <a style=\"padding-left: 12px;\"></a>",
         buttonpadder: "padding-left: 2px;height:22px;",
         box: "padding-right:40px;box-sizing: border-box;width: 50%;border: 10px solid black;float: left;",
