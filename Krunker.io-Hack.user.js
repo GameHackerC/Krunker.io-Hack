@@ -89,13 +89,13 @@ function activatehack(socket){
     }
     //genel isimlendirme ve ayarlar
     this.settings = {
-        feature1: "",
-        feature2: "",
+        feature1: "Show FPS",
+        feature2: "Fire Bot",
         feature3: "Game Menu",
-        feature4: "",
-        feature5: "",
-        feature6: "",
-        feature7: "",
+        feature4: "Show ESP",
+        feature5: "Change Background",
+        feature6: "Rainbow Background",
+        feature7: "Zoom IN/OUT",
         string: "<a style=\"padding-right: 12px;\"></a> <font color=\"black\">-</font> <a style=\"padding-left: 12px;\"></a>",
         buttonpadder: "padding-left: 2px;height:22px;",
         box: "padding-right:40px;box-sizing: border-box;width: 50%;border: 10px solid black;float: left;",
@@ -698,7 +698,6 @@ class Krunkbot {
             margin-top: 20px;
             background-color: rgba(0, 0, 0, 0.2);
           }
-
           #krunkbotInfoBox .krunkbotTitle {
             font-size: 18px;
             font-weight: bold;
@@ -707,12 +706,10 @@ class Krunkbot {
             margin-top: 5px;
             margin-bottom: 5px;
           }
-
           #krunkbotInfoBox .leaderItem {
            font-size: 14px;
           }
         </style>
-
         <div id="krunkbotInfoBox"></div>
       </div>
     `.trim();
@@ -741,7 +738,6 @@ class Logger {
       <html lang="en">
         <head>
           <title>IOMODS.ORG KRUNKER BOT CRASHED!</title>
-
           <style>
             .container {
               position: absolute;
@@ -753,13 +749,11 @@ class Logger {
               text-align: center;
               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
             }
-
             .title {
               font-size: 24px;
               font-weight: bold;
               margin-bottom: 5px;
             }
-
             .message {
               font-size: 20px;
             }
@@ -817,13 +811,10 @@ function patchForAimbot(script) {
         if (this.target) {
           this.object.rotation.y = this.target.yD;
           this.pitchObject.rotation.x = this.target.xD;
-
           const half = Math.PI / 2;
           this.pitchObject.rotation.x = Math.max(-half, Math.min(half, this.pitchObject.rotation.x));
-
           this.yDr = this.pitchObject.rotation.x % Math.PI;
           this.xDr = this.object.rotation.y % Math.PI;
-
           ${$1}
         }
       }, this.camLookAt = this.${$2} =
